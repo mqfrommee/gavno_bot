@@ -24,8 +24,6 @@ facts = [
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = [
         [InlineKeyboardButton("Начать", callback_data='authorize')],
-        [InlineKeyboardButton("Контактная информация", callback_data='contact')],
-        [InlineKeyboardButton("Часто задаваемые вопросы", callback_data='faq')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
@@ -111,6 +109,7 @@ async def faq(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await query.edit_message_text(faq_text, reply_markup=reply_markup)
+    
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     step = context.user_data.get('step')
