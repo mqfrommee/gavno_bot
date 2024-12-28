@@ -200,7 +200,7 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     logger.error(f'Update {update} caused error {context.error}')
 
 def main():
-    TOKEN = '7940254732:AAGAjvE1itjJnd9eQ7c5iCtVCo9Z_dNojnw'
+    TOKEN = 'кажется никогда, нам на этой планете не встретиться'
 
     app = ApplicationBuilder().token(TOKEN).build()
 
